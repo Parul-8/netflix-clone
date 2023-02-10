@@ -1,0 +1,33 @@
+.row {
+    color: whitesmoke;
+    margin-left: 20px;
+}
+
+.row__posters {
+    display: flex;
+    /* to freeze the movement of y-axis */
+    overflow-y: hidden;
+    /* to scroll in direction of x-axis*/
+    overflow-x: scroll;
+    /*removing padding, crops the image then transitioned, on hovering over it*/
+    padding: 20px;
+}
+
+.row__poster {
+    /* to keep the aspect ratio of picture to be original*/
+    object-fit: contain;
+    width: 100%;
+    max-height: 100px;
+    margin-right: 12px;
+    /* to specify delay time for transition to happen*/
+    transition: transform 450ms;
+}
+
+/*hides the scroll bars from screen but keeps the functionality*/
+.row__posters::-webkit-scrollbar {
+    display: none;
+}
+
+.row__poster:hover {
+    transform: scale(1.08);
+}
